@@ -1,0 +1,292 @@
+@font-face {
+    font-family: Geo;
+    src: url('GeosansLight.ttf');
+}
+
+html {
+    background-color: #e8e6d8;
+}
+
+.mainContent {
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Helvetica;
+    max-width: 95%;
+    background-color: rgba(50, 50, 50, 0.1);
+    border: 3px hidden solid;
+    border-radius: 3px;
+}
+
+article {
+    background-color: rgba(255,255,255, 0.5);
+    margin: 5%;
+    padding: 5%;
+    border: 3px hidden;
+    border-radius: 3px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 43px;
+	color: rgb(237, 245, 225);
+	text-decoration: underline;
+	padding: 30px 15px;
+	font-family: Geo;
+}
+
+h2 {
+	font-size: 28px;
+    color: rgb(237, 245, 225);
+	margin: 0px 10px 15px 10px;
+	font-family: Geo;
+}
+
+h3 {
+    visibility: hidden;
+    display: none;
+}
+
+p {
+	font-size: 14pt;
+    font-family: Geo;
+    display: inline;
+}
+
+p.emph {
+    margin: 0px;
+    font-weight: bold;
+    font-style: italic;
+    display: inline;
+}
+
+dl {
+    font-size: 14pt;
+    font-family: Geo;
+    text-align: left;
+}
+
+dt {
+    font-weight: bold;
+    font-style: italic;
+}
+
+dd {
+    margin-left: 2em;
+    margin-bottom: 10px;
+}
+
+article ul {
+    font-family: Geo;
+    font-size: 14pt;
+    list-style-type: square;
+    padding-left: 5%;
+}
+
+article li {
+    margin-bottom: 10px;
+    text-align: left;
+
+}
+
+nav {
+	position: fixed;
+    width:100%;
+    margin:auto;
+    background-color: #05386B;
+	text-align: center;
+    z-index: 1;
+}
+
+.heading {
+    color: rgb(237, 245, 225);
+    background-color: #05386B;
+    font-family: Geo;
+    font-weight: bolder;
+    font-size: 14pt;
+    width: 15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: rgb(237, 245, 225);
+    width: 15%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(187, 205, 185);
+}
+
+.heading:hover .dropdown-content {
+    margin-top: 10px;
+    display: block;
+    float: none;
+}
+
+.heading:hover {
+    background-color: #379683;
+    z-index: 1;
+}
+
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.mainContent:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    nav {
+        position: absolute;
+        width: 25%;
+        float: left;
+        background-color: rgba(5, 56, 107, 0.4);
+
+    }
+    nav .heading {
+        position: relative;
+        width: 100%;
+        background-color: rgba(5, 56, 107, 0.4);
+        text-align: center;
+    }
+    nav .dropdown-content {
+        width: 25%;
+    }
+}
+
+
+footer {
+	padding: 15px 0;
+    background-color: rgba(194, 83, 43, 0.9);
+    border-top: 3px solid orange;
+    border-radius: 6px 6px 0px 0px;
+    color: #eee;
+    font-size: 13px;
+    text-align: center;
+    font-family: Helvetica;
+
+}
+
+footer span {
+    display: inline-block;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: bold;
+}
+
+
+
+.title-image {
+    height: 120px;
+    width: 80%;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 3px hidden;
+    border-radius: 3px;
+}
+#overview .title-image {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('climate.jpg');
+}
+
+#impacts .title-image {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('impacts.jpg');
+}
+
+#news .title-image {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('news.jpg');
+}
+
+/* Place text in the middle of the image */
+.title-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bolder;
+}
+
+.title-text h2{
+    font-family: Geo;
+    color: #efefef;
+    font-weight: bolder;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+
+.hero-image {
+    height: 100vh;
+    width: 100vw;
+    max-width:100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-image h1{
+    font-family: Helvetica;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50pt;
+    text-decoration: none;
+}
+
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bolder;
+}
+
+.articleEmbed {
+    display: block;
+    width: 90%;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+    border: 2px solid #fff;
+}
